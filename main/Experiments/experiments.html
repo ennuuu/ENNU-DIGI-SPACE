@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ENNU | Experiments</title>
+    <link rel="stylesheet" href="experiments.css" />
+  </head>
+  <body class="page-experiments">
+    <canvas
+      id="background-canvas"
+      data-asset-root="../../assets"
+      aria-hidden="true"
+    ></canvas>
+
+    <header>
+      <img
+        class="site-header-svg"
+        src="../../assets/Header/Header.svg"
+        alt=""
+      />
+      <div class="header-content">
+        <a class="logo" href="../main.html" aria-label="ENNU home">
+          <img
+            class="logo-image"
+            src="../../assets/Logo/E%20LOGO.png"
+            alt="ENNU"
+          />
+        </a>
+        <nav class="header-hotspots" aria-label="Main navigation">
+          <a
+            class="header-button header-button-white"
+            href="../main.html#about"
+            aria-label="Profile"
+          >
+            <img src="../../assets/Header/Profile%20Button.svg" alt="" />
+          </a>
+          <a
+            class="header-button header-button-blue"
+            href="../Motion/motion.html"
+            aria-label="Motion"
+          >
+            <img src="../../assets/Header/Work%20Button.svg" alt="" />
+          </a>
+          <a
+            class="header-button header-button-cyan"
+            href="../Films/films.html"
+            aria-label="Films"
+          >
+            <img src="../../assets/Header/Films%20Button.svg" alt="" />
+          </a>
+          <a
+            class="header-button header-button-black"
+            href="experiments.html"
+            aria-label="Experiments"
+          >
+            <img src="../../assets/Header/Experiments%20Button.svg" alt="" />
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <section class="motion-gallery" aria-label="Experiments">
+        <div class="motion-gallery-stage">
+          <article
+            class="motion-tab motion-tab-one"
+            data-tab-number="1"
+            data-project="project-1"
+            tabindex="0"
+          >
+            <img
+              class="motion-artwork"
+              src="../../assets/Motion/Bromance-1.png"
+              alt="Bromance experiment project"
+              draggable="false"
+            />
+          </article>
+          <article
+            class="motion-tab motion-tab-two"
+            data-tab-number="2"
+            data-project="project-2"
+            tabindex="0"
+          >
+            <div class="motion-artwork motion-placeholder">Experiment 2</div>
+          </article>
+          <article
+            class="motion-tab motion-tab-three"
+            data-tab-number="3"
+            data-project="project-3"
+            tabindex="0"
+          >
+            <div class="motion-artwork motion-placeholder">Experiment 3</div>
+          </article>
+          <article
+            class="motion-tab motion-tab-four"
+            data-tab-number="4"
+            data-project="project-4"
+            tabindex="0"
+          >
+            <img
+              class="motion-artwork"
+              src="../../assets/Motion/Me.J-1.png"
+              alt="Me.J experiment project"
+              draggable="false"
+            />
+          </article>
+          <article
+            class="motion-tab motion-tab-five"
+            data-tab-number="5"
+            data-project="project-5"
+            tabindex="0"
+          >
+            <div class="motion-artwork motion-placeholder">Experiment 5</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="motion-project-view" data-project-view="project-1" hidden>
+        <button
+          class="motion-back-button"
+          type="button"
+          aria-label="Back to Experiments"
+        >
+          &#8592;
+        </button>
+        <div class="project-carousel" aria-label="Experiment one content">
+          <div class="project-track">
+            <article class="project-tab project-tab-active">
+              <video
+                class="motion-artwork motion-preview-video"
+                src="../../assets/Motion/Motion%20Videos/Bromance-FinalCut.mp4"
+                controls
+                autoplay
+                muted
+                loop
+                playsinline
+                aria-label="Bromance project"
+              ></video>
+              <p>Bromance.mp4</p>
+            </article>
+          </div>
+        </div>
+        <section
+          class="project-detail"
+          aria-label="Experiment one details"
+          hidden
+        >
+          <div class="project-detail-track">
+            <article class="project-detail-panel project-detail-intro">
+              <h1>Bromance</h1>
+              <p>
+                <em
+                  >A simple ripped pair of pants spirals into total chaos when a
+                  best friend tries to cover it up, making the embarrassment
+                  twice as loud.</em
+                >
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-image-panel">
+              <img
+                src="../../assets/Motion/Bromance-1.png"
+                alt="Bromance experiment artwork"
+              />
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Details</h2>
+              <p>
+                Bromance is a 20s stop-motion animation about the quiet,
+                unglamorous heroism found in true friendship. Set against the
+                backdrop of a Vietnamese high school basketball court, the film
+                follows two best friends navigating an unexpectedly mortifying
+                moment with humor, heart, and a whole lot of awkward poses.
+              </p>
+              <p>
+                When everything goes wrong at the worst possible time, it's not
+                a cape-wearing hero who saves the day - it's a teammate who
+                gives everything he has, quite literally, so his friend can hold
+                his head high. Blending comedic timing with a stylized visual
+                aesthetic, Bromance celebrates the idea that family isn't always
+                blood - sometimes it's the guy who has your back, and your
+                pants.
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-image-panel">
+              <img
+                src="../../assets/Motion/Bromance-2.png"
+                alt="Bromance experiment artwork"
+              />
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Credits</h2>
+              <p>Art Director | Ngo Khanh An</p>
+              <p>
+                Storyboard Development | Ngo Khanh An, Nguyen Thuy An, Pham
+                Phuong Vy
+              </p>
+              <p>Characters Concept Sketches | Tran Thi Thuy Hang</p>
+              <p>
+                Puppet & Props Fabrication | Ngo Khanh An, Nguyen Thuy An, Pham
+                Phuong Vy
+              </p>
+              <p>Costumes Design | Nguyen Thuy An, Pham Phuong Vy</p>
+              <p>3D Environment Artists | Ngo Khanh An, Tran Thi Thuy Hang</p>
+              <p>2D Assets Artists | Nguyen Thuy An, Tran Thi Thuy Hang</p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <p>Animation Supervisor/DOP | Ngo Khanh An</p>
+              <p>Animators | Nguyen Thuy An, Pham Phuong Vy, Ngo Khanh An</p>
+              <p>Sound Design | Ngo Khanh An, Nguyen Thuy An</p>
+              <p>VFX & Compositing | Ngo Khanh An</p>
+              <h3>Special Thanks To</h3>
+              <p>Ricardo Arce</p>
+              <p>Huoston Rodriguez</p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>For More Details</h2>
+              <p>
+                Visit
+                <a
+                  class="project-detail-link"
+                  href="https://youtu.be/R2j0yZsPtkU?si=oAb3JFUwQRiCorXj"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Bromance original video</a
+                >
+                on YouTube.
+              </p>
+              <p>
+                Visit
+                <a
+                  class="project-detail-link"
+                  href="https://www.instagram.com/reel/DYmlvwFSsY9/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Bromance original post</a
+                >
+                on Instagram.
+              </p>
+              <p>
+                Visit
+                <a
+                  class="project-detail-link"
+                  href="https://www.instagram.com/reel/DY4rQe_SwVL/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Bromance's Breakdown</a
+                >
+                on Instagram.
+              </p>
+              <p>
+                Visit
+                <a
+                  class="project-detail-link"
+                  href="https://www.instagram.com/reel/DZfA4tByHRU/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >the Making of Bromance</a
+                >
+                on Instagram.
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <p>
+                Visit
+                <a
+                  class="project-detail-link"
+                  href="https://www.instagram.com/alyxyuu____1101?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ngo Khanh An</a
+                >
+                on Instagram.
+              </p>
+              <p>
+                Visit
+                <a
+                  class="project-detail-link"
+                  href="https://www.instagram.com/nhoamnhoam.chocomint?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Nguyen Thuy An</a
+                >
+                on Instagram.
+              </p>
+              <p>
+                Visit
+                <a
+                  class="project-detail-link"
+                  href="https://www.instagram.com/drow_in_1609?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Tran Thi Thuy Hang</a
+                >
+                on Instagram.
+              </p>
+            </article>
+          </div>
+        </section>
+      </section>
+      <section class="motion-project-view" data-project-view="project-2" hidden>
+        <button
+          class="motion-back-button"
+          type="button"
+          aria-label="Back to Experiments"
+        >
+          &#8592;
+        </button>
+        <div class="project-carousel" aria-label="Experiment two content">
+          <div class="project-track">
+            <article class="project-tab project-tab-active">
+              <div class="motion-artwork motion-placeholder">Experiment 2</div>
+              <p>Experiment 2</p>
+            </article>
+          </div>
+        </div>
+        <section
+          class="project-detail"
+          aria-label="Experiment two details"
+          hidden
+        >
+          <div class="project-detail-track">
+            <article class="project-detail-panel project-detail-intro">
+              <h1>Experiment 2</h1>
+              <p>Experiment information and images will be added here.</p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Details</h2>
+              <p>Placeholder content for the second experiment.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+      <section class="motion-project-view" data-project-view="project-3" hidden>
+        <button
+          class="motion-back-button"
+          type="button"
+          aria-label="Back to Experiments"
+        >
+          &#8592;
+        </button>
+        <div class="project-carousel" aria-label="Experiment three content">
+          <div class="project-track">
+            <article class="project-tab project-tab-active">
+              <div class="motion-artwork motion-placeholder">Experiment 3</div>
+              <p>Experiment 3</p>
+            </article>
+          </div>
+        </div>
+        <section
+          class="project-detail"
+          aria-label="Experiment three details"
+          hidden
+        >
+          <div class="project-detail-track">
+            <article class="project-detail-panel project-detail-intro">
+              <h1>Experiment 3</h1>
+              <p>Experiment information and images will be added here.</p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Details</h2>
+              <p>Placeholder content for the third experiment.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+      <section class="motion-project-view" data-project-view="project-4" hidden>
+        <button
+          class="motion-back-button"
+          type="button"
+          aria-label="Back to Experiments"
+        >
+          &#8592;
+        </button>
+        <div class="project-carousel" aria-label="Experiment four content">
+          <div class="project-track">
+            <article class="project-tab project-tab-active">
+              <video
+                class="motion-artwork motion-preview-video"
+                src="../../assets/Motion/Motion%20Videos/Me.J%20demo%20final.mp4"
+                controls
+                autoplay
+                muted
+                loop
+                playsinline
+                aria-label="Me.J experiment project"
+              ></video>
+              <p>Me.J_Website_Demo.mp4</p>
+            </article>
+          </div>
+        </div>
+        <section
+          class="project-detail"
+          aria-label="Experiment four details"
+          hidden
+        >
+          <div class="project-detail-track">
+            <article class="project-detail-panel project-detail-intro">
+              <h1>Me.J</h1>
+              <p><em>Move. Mix. Master.</em></p>
+            </article>
+            <article class="project-detail-panel project-detail-image-panel">
+              <img
+                src="../../assets/Motion/Me.J-1.png"
+                alt="Me.J experiment artwork"
+              />
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Details</h2>
+              <p>
+                Me.J is a hand gesture-based music control website powered by
+                MediaPipe Pose Estimation, allowing artists to manipulate sound
+                naturally. Integrated with Tone.js, it provides a versatile,
+                expressive tool for DJs, producers, and performers, transforming
+                music interaction into an immersive visual and auditory
+                experience.
+              </p>
+              <p>
+                By removing physical constraints, Me.J redefines digital music
+                performance, enabling fluid, expressive control through body
+                movements. As the demand for immersive performances grows, Me.J
+                leads the way in merging technology with artistic freedom.
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Key Features</h2>
+              <ul class="project-detail-list">
+                <li>Defined gesture system</li>
+                <li>Cloud-based song searching function</li>
+                <li>Music Management System</li>
+                <li>Crossfader</li>
+                <li>Visualizer Mode</li>
+                <li>Record and save mix as video file</li>
+                <li>Upgrade Prompt</li>
+                <li>Sign up / Log in Popup</li>
+                <li>Menu Bar</li>
+                <li>Set up Guidance &amp; Tutorial</li>
+              </ul>
+            </article>
+            <article class="project-detail-panel project-detail-image-panel">
+              <img
+                src="../../assets/Motion/Me.J-2.png"
+                alt="Me.J experiment artwork"
+              />
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Gesture System</h2>
+              <h3>Effect Selection (Left Hand)</h3>
+              <ul class="project-detail-list">
+                <li>
+                  Rotate your left thumb left or right to cycle through
+                  available effects in the effect roulette, including reverb,
+                  delay, distortion, and pitch shift.
+                </li>
+                <li>Raise your thumb to select the default effect.</li>
+              </ul>
+              <h3>Effect Locking (Left Hand)</h3>
+              <ul class="project-detail-list">
+                <li>Raise your pinky finger to lock the selected effect.</li>
+              </ul>
+              <h3>Effect Level Control (Right Hand)</h3>
+              <ul class="project-detail-list">
+                <li>
+                  After selecting an effect, use a pinch gesture with your right
+                  hand. Touching fingers set the intensity to 0%; spreading them
+                  apart sets it to 100%. This works while the effect is
+                  unlocked.
+                </li>
+              </ul>
+              <h3>Crossfader</h3>
+              <ul class="project-detail-list">
+                <li>Use a peace sign to slide the crossfader left or right.</li>
+                <li>Slide left to boost Deck A and lower Deck B.</li>
+                <li>Slide right to boost Deck B and lower Deck A.</li>
+              </ul>
+            </article>
+            <article class="project-detail-panel project-detail-image-panel">
+              <img
+                src="../../assets/Motion/Me.J-3.png"
+                alt="Me.J experiment artwork"
+              />
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Cloud-based Song Searching Function</h2>
+              <p>
+                Music is stored in the cloud using MongoDB, along with details
+                like song title and artist. When a user searches for a song, the
+                system checks the database for matches and displays the results
+                directly in the Browse Online section.
+              </p>
+              <h2>Music Management System</h2>
+              <p>
+                After uploading music from your device or browsing online,
+                simply drag and drop tracks into Deck A or Deck B in the
+                Playlist window. The highlighted track in each column indicates
+                the currently active song for that deck.
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Visualizer Mode</h2>
+              <p>
+                Visualizer Mode offers two options to enhance your performance
+                visuals:
+              </p>
+              <ul class="project-detail-list">
+                <li>
+                  Virtual Background: Add a custom visual layer to your webcam
+                  background.
+                </li>
+                <li>
+                  Interactive Visual: Add graphics that react in real time to
+                  your hand gestures.
+                </li>
+              </ul>
+              <h2>Upgrade Prompt</h2>
+              <p>
+                Clicking a locked feature triggers an upgrade prompt, guiding
+                users to the subscription panel.
+              </p>
+              <h2>Sign up / Log in Popup</h2>
+              <p>
+                Clicking the Sign Up or Log In buttons will open the
+                authentication panel. Users can switch between the two panels as
+                needed.
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-image-panel">
+              <img
+                src="../../assets/Motion/Me.J-4.png"
+                alt="Me.J experiment artwork"
+              />
+              <p class="project-detail-caption">
+                Finalized product full layout.
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Menu Bar</h2>
+              <p>The menu bar includes the following sections:</p>
+              <ul class="project-detail-list">
+                <li>
+                  Saved Sessions: Save your current DJ setup, including effects
+                  and playlists.
+                </li>
+                <li>
+                  Music Library: Access uploaded songs or recently used tracks.
+                </li>
+                <li>Effects Library: Download additional sound effects.</li>
+                <li>Visual Library: Add more visuals for Visualizer Mode.</li>
+                <li>Settings: Manage your account and preferences.</li>
+              </ul>
+              <p>
+                If a user has not signed in, clicking any of these options will
+                automatically open the Sign Up / Log In panel.
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Set up Guidance & Tutorial</h2>
+              <p>
+                When users first enter the DJ interface, they’re greeted with a
+                splash screen that walks them through the essentials - making
+                sure they’re centered in frame, have good lighting, and camera
+                access is enabled.Once setup is complete, they’ll dive into a
+                step-by-step onboarding tutorial covering everything they need
+                to get started:
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-image-panel">
+              <img
+                src="../../assets/Motion/Me.J-5.png"
+                alt="Me.J experiment artwork"
+              />
+              <p class="project-detail-caption">First prototype full layout.</p>
+            </article>
+            <article class="project-detail-panel project-detail-image-panel">
+              <img
+                src="../../assets/Motion/Me.J-6.jpg"
+                alt="Me.J experiment artwork"
+              />
+              <p class="project-detail-caption">
+                Some previous trial and error prototypes.
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Credits</h2>
+              <p>Product Developer | Pham Phuong Vy</p>
+              <p>Product Developer | Ngo Khanh An</p>
+              <p>Product Developer | Nguyen Nhu Phuong Uyen</p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>For More Details</h2>
+              <p>
+                Visit the
+                <a
+                  class="project-detail-link"
+                  href="https://me-j-web.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >official Me.J website</a
+                >.
+              </p>
+              <p>
+                Visit
+                <a
+                  class="project-detail-link"
+                  href="https://www.instagram.com/reel/DdJTwQoCs7z/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Me.J original post</a
+                >
+                on Instagram.
+              </p>
+              <p>
+                Visit
+                <a
+                  class="project-detail-link"
+                  href="https://www.instagram.com/uyenn__phuongg?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Nguyen Nhu Phuong Uyen</a
+                >
+                on Instagram.
+              </p>
+              <p>
+                Visit
+                <a
+                  class="project-detail-link"
+                  href="https://www.instagram.com/alyxyuu____1101?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ngo Khanh An</a
+                >
+                on Instagram.
+              </p>
+            </article>
+          </div>
+        </section>
+      </section>
+      <section class="motion-project-view" data-project-view="project-5" hidden>
+        <button
+          class="motion-back-button"
+          type="button"
+          aria-label="Back to Experiments"
+        >
+          &#8592;
+        </button>
+        <div class="project-carousel" aria-label="Experiment five content">
+          <div class="project-track">
+            <article class="project-tab project-tab-active">
+              <div class="motion-artwork motion-placeholder">Experiment 5</div>
+              <p>Experiment 5</p>
+            </article>
+          </div>
+        </div>
+        <section
+          class="project-detail"
+          aria-label="Experiment five details"
+          hidden
+        >
+          <div class="project-detail-track">
+            <article class="project-detail-panel project-detail-intro">
+              <h1>Experiment 5</h1>
+              <p>Experiment information and images will be added here.</p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Details</h2>
+              <p>Placeholder content for the fifth experiment.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <img
+        class="site-footer-svg"
+        src="../../assets/Testing%20Footer.svg"
+        alt=""
+      />
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.10/dist/browser/pixi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pixi-filters@5.3.0/dist/browser/pixi-filters.js"></script>
+    <script src="../main.js"></script>
+    <script src="../Motion/motion.js"></script>
+  </body>
+</html>

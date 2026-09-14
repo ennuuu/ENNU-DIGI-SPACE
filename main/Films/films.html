@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ENNU | Films</title>
+    <link rel="stylesheet" href="films.css" />
+  </head>
+  <body class="page-films">
+    <canvas
+      id="background-canvas"
+      data-asset-root="../../assets"
+      aria-hidden="true"
+    ></canvas>
+
+    <header>
+      <img
+        class="site-header-svg"
+        src="../../assets/Header/Header.svg"
+        alt=""
+      />
+      <div class="header-content">
+        <a class="logo" href="../main.html" aria-label="ENNU home">
+          <img
+            class="logo-image"
+            src="../../assets/Logo/E%20LOGO.png"
+            alt="ENNU"
+          />
+        </a>
+        <nav class="header-hotspots" aria-label="Main navigation">
+          <a
+            class="header-button header-button-white"
+            href="../main.html#about"
+            aria-label="Profile"
+          >
+            <img src="../../assets/Header/Profile%20Button.svg" alt="" />
+          </a>
+          <a
+            class="header-button header-button-blue"
+            href="../Motion/motion.html"
+            aria-label="Motion"
+          >
+            <img src="../../assets/Header/Work%20Button.svg" alt="" />
+          </a>
+          <a
+            class="header-button header-button-cyan"
+            href="films.html"
+            aria-label="Films"
+          >
+            <img src="../../assets/Header/Films%20Button.svg" alt="" />
+          </a>
+          <a
+            class="header-button header-button-black"
+            href="../Experiments/experiments.html"
+            aria-label="Experiments"
+          >
+            <img src="../../assets/Header/Experiments%20Button.svg" alt="" />
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <section class="motion-gallery" aria-label="Film projects">
+        <div class="motion-gallery-stage">
+          <article
+            class="motion-tab motion-tab-one"
+            data-tab-number="1"
+            data-project="project-1"
+            tabindex="0"
+          >
+            <img
+              class="motion-artwork"
+              src="../../assets/Motion/AnQuang-1.png"
+              alt="An Quang film project"
+              draggable="false"
+            />
+          </article>
+          <article
+            class="motion-tab motion-tab-two"
+            data-tab-number="2"
+            data-project="project-2"
+            tabindex="0"
+          >
+            <div class="motion-artwork film-tab-copy">
+              <h2>Films</h2>
+              <p>
+                For films, I just recently got myself into, so this is a
+                collection of all the film I took part in different roles.
+              </p>
+            </div>
+          </article>
+          <article
+            class="motion-tab motion-tab-three"
+            data-tab-number="3"
+            data-project="project-3"
+            tabindex="0"
+          >
+            <img
+              class="motion-artwork"
+              src="../../assets/Motion/Beyondthecompliment-1.jpg"
+              alt="Beyond the Compliment film project"
+              draggable="false"
+            />
+          </article>
+          <article
+            class="motion-tab motion-tab-four"
+            data-tab-number="4"
+            data-project="project-4"
+            tabindex="0"
+          >
+            <div class="motion-artwork motion-placeholder">Film 4</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="motion-project-view" data-project-view="project-1" hidden>
+        <button
+          class="motion-back-button"
+          type="button"
+          aria-label="Back to Films"
+        >
+          &#8592;
+        </button>
+        <div class="project-carousel" aria-label="Film project one content">
+          <div class="project-track">
+            <article class="project-tab project-tab-active">
+              <img
+                class="motion-artwork"
+                src="../../assets/Motion/AnQuang-1.png"
+                alt="An Quang film project"
+                draggable="false"
+              />
+              <p>Film 1</p>
+            </article>
+          </div>
+        </div>
+        <section
+          class="project-detail"
+          aria-label="Film project one details"
+          hidden
+        >
+          <div class="project-detail-track">
+            <article class="project-detail-panel project-detail-intro">
+              <h1>An Quang</h1>
+              <p>Film project information and images will be added here.</p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Details</h2>
+              <p>Placeholder content for the first film project.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+      <section class="motion-project-view" data-project-view="project-2" hidden>
+        <button
+          class="motion-back-button"
+          type="button"
+          aria-label="Back to Films"
+        >
+          &#8592;
+        </button>
+        <div class="project-carousel" aria-label="Film project two content">
+          <div class="project-track">
+            <article class="project-tab project-tab-active">
+              <div class="motion-artwork film-tab-copy">
+                <h2>Films</h2>
+                <p>Selected film, video, and moving-image work.</p>
+              </div>
+              <p>Film 2</p>
+            </article>
+          </div>
+        </div>
+        <section
+          class="project-detail"
+          aria-label="Film project two details"
+          hidden
+        >
+          <div class="project-detail-track">
+            <article class="project-detail-panel project-detail-intro">
+              <h1>Films</h1>
+              <p>Film project information and images will be added here.</p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Details</h2>
+              <p>Placeholder content for the second film project.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+      <section class="motion-project-view" data-project-view="project-3" hidden>
+        <button
+          class="motion-back-button"
+          type="button"
+          aria-label="Back to Films"
+        >
+          &#8592;
+        </button>
+        <div class="project-carousel" aria-label="Film project three content">
+          <div class="project-track">
+            <article class="project-tab project-tab-active">
+              <img
+                class="motion-artwork"
+                src="../../assets/Motion/Beyondthecompliment-1.jpg"
+                alt="Beyond the Compliment film project"
+                draggable="false"
+              />
+              <p>
+                BEYOND THE COMPLIMENT - Short Film (a remake of "As good as it
+                gets")
+              </p>
+            </article>
+          </div>
+        </div>
+        <section
+          class="project-detail"
+          aria-label="Film project three details"
+          hidden
+        >
+          <div class="project-detail-track">
+            <article class="project-detail-panel project-detail-intro">
+              <h1>Beyond the <br />Compliment</h1>
+              <p><em>Vietnamese remake of "As good as it gets" (1997)</em></p>
+              <p>Directed by Vu Hoang</p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Details</h2>
+              <p>
+                "And it's never too late to say the word love...<br />A
+                middle-aged writer struggling with obsessive-compulsive disorder
+                (OCD) and a single mother unexpectedly find themselves caught up
+                in an unusual romance — where awkwardness, together with old
+                wounds from the past, slowly becomes a kind of healing emotion,
+                even though both of them have lost faith in love."
+              </p>
+              <p>
+                A more localized and deeper Vietnamese adaptation of the
+                endearing clumsiness between Thanh and Thu, set on a romantic
+                evening bathed in the glow of love's lights.
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-video-panel">
+              <iframe
+                class="project-video-embed"
+                src="https://www.youtube.com/embed/2d323q9oYto?controls=1&rel=0"
+                title="Beyond the Compliment film"
+                allow="
+                  autoplay;
+                  encrypted-media;
+                  picture-in-picture;
+                  fullscreen;
+                "
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Credits</h2>
+              <p>Featuring Chi Bao, Ngoc Hung<br />Director | Vu Hoang</p>
+              <p>
+                Production Manager | Hoang Lan <br />Producer | Thu Minh
+                <br />Director of Photography | Hoang Quan <br />Production
+                Designer | Binh Minh <br />Post Producer | Nguyen Tuan Minh
+              </p>
+              <p>
+                Support Actor | Khoi Vu, Minh Long <br />Extras | Mai Uyen,
+                Truong Phong, Tony Quan, Thieu Thinh, Khanh Lin, Tin Nguyen,
+                Thanh Xuan, Dminh Nguyen, Khanh An, Anna, Viv Leh, Quan Le, Sung
+                Han
+              </p>
+              <p>
+                Line Producer | Ha Nam Ngo, Linh Bui <br />Location Manager |
+                Hoang Lan <br />Production Assistant | Khoi Vu, Quan Le, Thanh
+                Xuan
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <p>
+                1st Assistant Director | Thu Minh <br />2nd Assistant Director |
+                Quo Nhu <br />Script Supervisor | Quo Nhu, Thu Minh
+                <br />Storyboard Artist | Holeo
+              </p>
+              <p>
+                1st Unit Cam Operator | Vincent Vo <br />2nd Unit Cam Operator |
+                Nhi Mach <br />AC - Focus Puller | Kim Le, Hao Le <br />
+                Gaffer | Ryan Nguyen <br />Grip | Sung Han, Viv Leh, Duy Vo,
+                Thieu Thinh <br />Sound Mixer | Nguyen Tuan Minh<br />Boom
+                Operator | Dminh Nguyen <br />DIT | Ha Nam Ngo<br />BTS
+                Photographer | Quan Le, Hoang Lan
+              </p>
+              <p>
+                Art Director | Nong Nguyen <br />Props Master | Anna <br />Set
+                Designer | Khanh An, Phuong Uyen <br />Wardrobe | Khanh Linh
+                <br />Food Stylist | Thanh Xuan <br />MUA | Tailalala, Linh Bui,
+                Binh Minh
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <p>
+                Editor | Vu Hoang, Nguyen Tuan Minh <br />Colorist | Thu Minh
+                <br />Sound Designer | Nguyen Tuan Minh <br />Foley Artist |
+                Nguyen Tuan Minh <br />Subtitle | Binh Minh <br />Post
+                Supervisor | Vu Hoang, Hoang Quan
+              </p>
+              <p>OST "Khoảng Không" Hong Phuc ft. Huyen Trang</p>
+              <h2>For More Details</h2>
+              <p>
+                Visit
+                <a
+                  class="project-detail-link"
+                  href="https://youtu.be/2d323q9oYto?si=HuGmPRXrbCJYtYmK"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Beyond The Compliment Shortfilm</a
+                >
+                on YouTube.
+              </p>
+              <p>
+                Visit
+                <a
+                  class="project-detail-link"
+                  href="https://www.facebook.com/share/p/1HtAkM1cXA/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Beyond The Compliment's Director Post</a
+                >
+                on Facebook.
+              </p>
+              <p>
+                Visit Beyond The Compliment's Director
+                <a
+                  class="project-detail-link"
+                  href="https://www.facebook.com/vhtn06"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Vu Hoang</a
+                >
+                on Facebook.
+              </p>
+            </article>
+          </div>
+        </section>
+      </section>
+      <section class="motion-project-view" data-project-view="project-4" hidden>
+        <button
+          class="motion-back-button"
+          type="button"
+          aria-label="Back to Films"
+        >
+          &#8592;
+        </button>
+        <div class="project-carousel" aria-label="Film project four content">
+          <div class="project-track">
+            <article class="project-tab project-tab-active">
+              <video
+                class="project-video"
+                src="../../assets/Motion/Motion%20Videos/Veilofash_animation.mp4"
+                controls
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+              <p>Veil of Ash.mp4</p>
+            </article>
+          </div>
+        </div>
+        <section
+          class="project-detail"
+          aria-label="Veil of Ash film details"
+          hidden
+        >
+          <div class="project-detail-track">
+            <article class="project-detail-panel project-detail-intro">
+              <h1>Veil of Ash</h1>
+              <p>
+                A blade, a mask, a whisper. This film explores memory, fate, and
+                brotherhood through a lyrical animated world.
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-image-panel">
+              <img
+                src="../../assets/Motion/Veilofash-1.png"
+                alt="Veil of Ash concept artwork"
+              />
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Details</h2>
+              <p>
+                Placeholder film detail content for the Veil of Ash project.
+              </p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <img
+        class="site-footer-svg"
+        src="../../assets/Testing%20Footer.svg"
+        alt=""
+      />
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.10/dist/browser/pixi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pixi-filters@5.3.0/dist/browser/pixi-filters.js"></script>
+    <script src="../main.js"></script>
+    <script src="../Motion/motion.js"></script>
+  </body>
+</html>

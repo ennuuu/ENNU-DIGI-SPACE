@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ENNU | Portfolio</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body class="page-main">
+    <canvas
+      id="background-canvas"
+      data-asset-root="../assets"
+      aria-hidden="true"
+    ></canvas>
+
+    <header>
+      <img class="site-header-svg" src="../assets/Header/Header.svg" alt="" />
+      <div class="header-content">
+        <a class="logo" href="#home" data-view="home" aria-label="ENNU home">
+          <img
+            class="logo-image"
+            src="../assets/Logo/E%20LOGO.png"
+            alt="ENNU"
+          />
+        </a>
+        <nav class="header-hotspots" aria-label="Main navigation">
+          <a
+            class="header-button header-button-white"
+            href="#about"
+            data-view="about"
+            aria-label="Profile"
+          >
+            <img src="../assets/Header/Profile%20Button.svg" alt="" />
+          </a>
+          <a
+            class="header-button header-button-blue"
+            href="Motion/motion.html"
+            aria-label="Motion"
+          >
+            <img src="../assets/Header/Work%20Button.svg" alt="" />
+          </a>
+          <a
+            class="header-button header-button-cyan"
+            href="Films/films.html"
+            aria-label="Films"
+          >
+            <img src="../assets/Header/Films%20Button.svg" alt="" />
+          </a>
+          <a
+            class="header-button header-button-black"
+            href="Experiments/experiments.html"
+            aria-label="Experiments"
+          >
+            <img src="../assets/Header/Experiments%20Button.svg" alt="" />
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="page-content">
+      <section class="page-view home-view" data-page="home">
+        <img
+          class="content-logo"
+          src="../assets/Logo/E%20LOGO.png"
+          alt="ENNU"
+        />
+        <!-- <p class="view-kicker">ENNU / PORTFOLIO SYSTEM</p> -->
+        <h1>Welcome to Ennu's Digital Space</h1>
+        <p class="view-description">Delivering what were promised.</p>
+      </section>
+
+      <section class="about-view" data-page="about" hidden>
+        <div class="app-icons" aria-label="Software used">
+          <img
+            class="app-icon app-icon-ps"
+            src="../assets/Apps/Ps.png"
+            alt="Photoshop"
+            draggable="false"
+          />
+          <img
+            class="app-icon app-icon-blender"
+            src="../assets/Apps/Blender.png"
+            alt="Blender"
+            draggable="false"
+          />
+          <img
+            class="app-icon app-icon-pr"
+            src="../assets/Apps/Pr.png"
+            alt="Premiere Pro"
+            draggable="false"
+          />
+          <img
+            class="app-icon app-icon-figma"
+            src="../assets/Apps/Figma.png"
+            alt="Figma"
+            draggable="false"
+          />
+          <img
+            class="app-icon app-icon-ae"
+            src="../assets/Apps/Ae.png"
+            alt="After Effects"
+            draggable="false"
+          />
+          <img
+            class="app-icon app-icon-ai"
+            src="../assets/Apps/Ai.png"
+            alt="Illustrator"
+            draggable="false"
+          />
+        </div>
+
+        <article class="profile-card profile-card-intro">
+          <h1>Hello, World!</h1>
+          <p>
+            My name is Pham Phuong Vy, also going by Anna or Ennu. I'm a
+            Multidisciplinary Designer and Digital Media student currently
+            studying at RMIT University based in Ho Chi Minh City, Vietnam.
+          </p>
+        </article>
+
+        <article class="profile-card profile-card-origin">
+          <img
+            class="profile-artwork"
+            src="../assets/Backgrounds/BDFM_2026_09_08_05_29.png"
+            alt="BDFM visual study"
+            draggable="false"
+          />
+        </article>
+
+        <article class="profile-card profile-card-process">
+          <h2>Process</h2>
+          <p>
+            My creative skill set spans across 2D, 3D, and UI/UX, focusing in
+            motion graphics, animation, video editing, and visual development.
+          </p>
+        </article>
+
+        <article class="profile-card profile-card-inquiry">
+          <h2>Inquiry</h2>
+          <p>
+            For me, design is all about balance. Sometimes it’s wild, playful,
+            and experimental, and other times it is neat, organized, precise. I
+            like working with both sides, because I think creativity really
+            happens when curiosity meets a bit of discipline. That mix shapes
+            not just how I design, but also how I view the world.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <img
+        class="site-footer-svg"
+        src="../assets/Testing%20Footer.svg"
+        alt=""
+      />
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.10/dist/browser/pixi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pixi-filters@5.3.0/dist/browser/pixi-filters.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ENNU | Motion</title>
+    <link rel="stylesheet" href="motion.css" />
+  </head>
+  <body class="page-motion">
+    <canvas
+      id="background-canvas"
+      data-asset-root="../../assets"
+      aria-hidden="true"
+    ></canvas>
+
+    <header>
+      <img
+        class="site-header-svg"
+        src="../../assets/Header/Header.svg"
+        alt=""
+      />
+      <div class="header-content">
+        <a class="logo" href="../main.html" aria-label="ENNU home">
+          <img
+            class="logo-image"
+            src="../../assets/Logo/E%20LOGO.png"
+            alt="ENNU"
+          />
+        </a>
+        <nav class="header-hotspots" aria-label="Main navigation">
+          <a
+            class="header-button header-button-white"
+            href="../main.html#about"
+            aria-label="Profile"
+          >
+            <img src="../../assets/Header/Profile%20Button.svg" alt="" />
+          </a>
+          <a
+            class="header-button header-button-blue"
+            href="motion.html"
+            aria-label="Motion"
+          >
+            <img src="../../assets/Header/Work%20Button.svg" alt="" />
+          </a>
+          <a
+            class="header-button header-button-cyan"
+            href="../Films/films.html"
+            aria-label="Films"
+          >
+            <img src="../../assets/Header/Films%20Button.svg" alt="" />
+          </a>
+          <a
+            class="header-button header-button-black"
+            href="../Experiments/experiments.html"
+            aria-label="Experiments"
+          >
+            <img src="../../assets/Header/Experiments%20Button.svg" alt="" />
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <section class="motion-gallery" aria-label="Motion projects">
+        <div class="motion-gallery-stage">
+          <article
+            class="motion-tab motion-tab-one"
+            data-tab-number="1"
+            data-project="project-1"
+            tabindex="0"
+          >
+            <img
+              class="motion-artwork"
+              src="../../assets/Motion/Lantern-1.png"
+              alt="Lantern motion project"
+              draggable="false"
+            />
+          </article>
+          <article
+            class="motion-tab motion-tab-two"
+            data-tab-number="2"
+            data-project="project-2"
+            tabindex="0"
+          >
+            <img
+              class="motion-artwork"
+              src="../../assets/Motion/ChonThuong.png"
+              alt="Chon Thuong motion project"
+              draggable="false"
+            />
+          </article>
+          <article
+            class="motion-tab motion-tab-three"
+            data-tab-number="3"
+            data-project="project-3"
+            tabindex="0"
+          >
+            <img
+              class="motion-artwork"
+              src="../../assets/Motion/Introvert-1.png"
+              alt="Introvert motion project"
+              draggable="false"
+            />
+          </article>
+          <article
+            class="motion-tab motion-tab-four"
+            data-tab-number="4"
+            data-project="project-4"
+            tabindex="0"
+          >
+            <img
+              class="motion-artwork"
+              src="../../assets/Motion/Veilofash-1.png"
+              alt="Veil of Ash motion project"
+              draggable="false"
+            />
+          </article>
+          <article
+            class="motion-tab motion-tab-five"
+            data-tab-number="5"
+            data-project="project-5"
+            tabindex="0"
+          >
+            <img
+              class="motion-artwork"
+              src="../../assets/Motion/Morph.png"
+              alt="Morph motion project"
+              draggable="false"
+            />
+          </article>
+        </div>
+      </section>
+
+      <section class="motion-project-view" data-project-view="project-1" hidden>
+        <button
+          class="motion-back-button"
+          type="button"
+          aria-label="Back to Motion"
+        >
+          &#8592;
+        </button>
+        <div class="project-carousel" aria-label="Project one content">
+          <div class="project-track">
+            <article class="project-tab project-tab-active">
+              <div class="motion-placeholder">Project 1 placeholder</div>
+              <p>Project 1</p>
+            </article>
+          </div>
+        </div>
+        <section class="project-detail" aria-label="Project one details" hidden>
+          <div class="project-detail-track">
+            <article class="project-detail-panel project-detail-intro">
+              <h1>Project 1</h1>
+              <p>Project information and images will be added here.</p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Details</h2>
+              <p>Placeholder content for the first project presentation.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+      <section class="motion-project-view" data-project-view="project-2" hidden>
+        <button
+          class="motion-back-button"
+          type="button"
+          aria-label="Back to Motion"
+        >
+          &#8592;
+        </button>
+        <div class="project-carousel" aria-label="Project two content">
+          <div class="project-track">
+            <article class="project-tab project-tab-active">
+              <div class="motion-placeholder">Project 2 placeholder</div>
+              <p>Project 2</p>
+            </article>
+          </div>
+        </div>
+        <section class="project-detail" aria-label="Project two details" hidden>
+          <div class="project-detail-track">
+            <article class="project-detail-panel project-detail-intro">
+              <h1>Project 2</h1>
+              <p>Project information and images will be added here.</p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Details</h2>
+              <p>Placeholder content for the second project presentation.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+      <section class="motion-project-view" data-project-view="project-3" hidden>
+        <button
+          class="motion-back-button"
+          type="button"
+          aria-label="Back to Motion"
+        >
+          &#8592;
+        </button>
+        <div class="project-carousel" aria-label="Project three content">
+          <div class="project-track">
+            <article class="project-tab project-tab-active">
+              <div class="motion-placeholder">Project 3 placeholder</div>
+              <p>Project 3</p>
+            </article>
+          </div>
+        </div>
+        <section
+          class="project-detail"
+          aria-label="Project three details"
+          hidden
+        >
+          <div class="project-detail-track">
+            <article class="project-detail-panel project-detail-intro">
+              <h1>Project 3</h1>
+              <p>Project information and images will be added here.</p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Details</h2>
+              <p>Placeholder content for the third project presentation.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+      <section class="motion-project-view" data-project-view="project-4" hidden>
+        <button
+          class="motion-back-button"
+          type="button"
+          aria-label="Back to Motion"
+        >
+          &#8592;
+        </button>
+        <div class="project-carousel" aria-label="Project four content">
+          <div class="project-track">
+            <article class="project-tab project-tab-active">
+              <video
+                class="project-video"
+                src="../../assets/Motion/Motion%20Videos/Veilofash_animation.mp4"
+                controls
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+              <p>Veil of Ash.mp4</p>
+            </article>
+          </div>
+        </div>
+        <section
+          class="project-detail"
+          aria-label="Veil of Ash project details"
+          hidden
+        >
+          <div class="project-detail-track">
+            <article class="project-detail-panel project-detail-intro">
+              <h1>Veil of Ash</h1>
+              <p>
+                <em>
+                  A blade, a mask, a whisper: one man’s pursuit of justice leads
+                  him into the fog where memory and fate become one.
+                </em>
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-image-panel">
+              <img
+                src="../../assets/Motion/Veilofash-1.png"
+                alt="Veil of Ash concept artwork"
+              />
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Abstract</h2>
+              <p>
+                Veil of Ash is a 3D animated shortfilm blending poetic tragedy
+                with East Asian visual traditions. It explores the unbreakable
+                bond of brotherhood and the cost of loss. A lone swordsman seeks
+                a fortune teller hidden in a mountain shrine, hoping to uncover
+                the fate of his younger brother, taken years ago in smoke and
+                fire.
+              </p>
+              <p>
+                The film inspired by ink-wash painting, samurai cinema, and
+                Asian cultures to reflects a personal creative journey to bring
+                a lyrical, emotional idea to life through animation.
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-image-panel">
+              <img
+                src="../../assets/Motion/Veilofash-3.png"
+                alt="Veil of Ash final form artwork"
+              />
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Production</h2>
+              <p>
+                The main software we used for most parts of the project is
+                Blender, including modeling, texturing, rigging, weight
+                painting, and animating.
+              </p>
+              <p>
+                After the animation process, our team brought all the footages
+                into After Effects for post-production.
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-image-panel">
+              <img
+                src="../../assets/Motion/Veilofash-4.jpg"
+                alt="Veil of Ash final form artwork"
+              />
+              <p class="project-detail-caption">
+                All of the character designs made in Blender.
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-image-panel">
+              <img
+                src="../../assets/Motion/Veilofash-5.jpg"
+                alt="Veil of Ash final form artwork"
+              />
+              <p class="project-detail-caption">
+                Character designs illustrations.
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-image-panel">
+              <img
+                src="../../assets/Motion/Veilofash-6.jpg"
+                alt="Veil of Ash final form artwork"
+              />
+              <p class="project-detail-caption">
+                Closed-up character designs illustrations.
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Credits</h2>
+              <p>Character Design | Ngo Khanh An</p>
+              <p>
+                Environment Design | Huynh Truc Nhat Minh, Nguyen Nhu Phuong
+                Uyen
+              </p>
+              <p>
+                Character Modeling | Pham Phuong Vy, Huynh Truc Nhat Minh,
+                Nguyen Nhu Phuong Uyen
+              </p>
+              <p>
+                Rigging & Weight Painting | Ngo Khanh An, Pham Phuong Vy, Huynh
+                Truc Nhat Minh, Nguyen Nhu Phuong Uyen
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <p>
+                Texturing & Shading | Ngo Khanh An, Huynh Truc Nhat Minh, Nguyen
+                Nhu Phuong Uyen
+              </p>
+              <p>Lighting & Compositing | Huynh Truc Nhat Minh</p>
+              <p>Animation | Ngo Khanh An, Pham Phuong Vy</p>
+              <p>Editing & Compositing & Sound Design | Ngo Khanh An</p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>For More Details</h2>
+              <p>
+                Visit
+                <a
+                  class="project-detail-link"
+                  href="https://www.instagram.com/reel/DPOoeaFEjJk/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Veil of Ash original post</a
+                >
+                on Instagram.
+              </p>
+              <p>
+                Visit
+                <a
+                  class="project-detail-link"
+                  href="https://www.instagram.com/p/DPOpR2wkpke/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Veil of Ash cutscenes</a
+                >
+                on Instagram.
+              </p>
+            </article>
+          </div>
+        </section>
+      </section>
+      <section class="motion-project-view" data-project-view="project-5" hidden>
+        <button
+          class="motion-back-button"
+          type="button"
+          aria-label="Back to Motion"
+        >
+          &#8592;
+        </button>
+        <div class="project-carousel" aria-label="Project five content">
+          <div class="project-track">
+            <article class="project-tab project-tab-active">
+              <video
+                class="project-video"
+                src="../../assets/Motion/Motion%20Videos/Morph.mp4"
+                controls
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+              <p>What is going on?.mp4</p>
+            </article>
+          </div>
+        </div>
+        <section
+          class="project-detail"
+          aria-label="Project five details"
+          hidden
+        >
+          <div class="project-detail-track">
+            <article class="project-detail-panel project-detail-intro">
+              <h1>What is going on?</h1>
+              <p>
+                This project using physical frame-by-frame animation techniques,
+                I animated some morphing transitions between different objects
+                on music. After that, I brought everything together in
+                post-production in After Effects.
+              </p>
+              <p>
+                The animation features “how was your day” by prod. inuyasha,
+                used with the producer’s permission.
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-image-panel">
+              <img
+                src="../../assets/Motion/Morph-2.jpg"
+                alt="What is going on? final form artwork"
+              />
+              <p class="project-detail-caption">
+                Some behind the scenes of the project.
+              </p>
+            </article>
+            <article class="project-detail-panel project-detail-image-panel">
+              <img
+                src="../../assets/Motion/Morph-3.jpg"
+                alt="What is going on? final form artwork"
+              />
+              <p class="project-detail-caption">.</p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>Credits</h2>
+              <p>how was your day | Original track by prod. inuyasha</p>
+            </article>
+            <article class="project-detail-panel project-detail-story">
+              <h2>For More Details</h2>
+              <p>
+                Visit
+                <a
+                  class="project-detail-link"
+                  href="https://www.instagram.com/reel/DRQCH69Atsh/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >What is going on? original post</a
+                >
+                on Instagram.
+              </p>
+              <p>
+                Visit
+                <a
+                  class="project-detail-link"
+                  href="https://youtu.be/sKnatpYjpTA?si=TP2A-CeyckmTDFNC"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >''how was your day''</a
+                >
+                by
+                <a
+                  class="project-detail-link"
+                  href="https://www.youtube.com/@inuyasha.mp3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >prod. inuyasha</a
+                >
+                on YouTube.
+              </p>
+            </article>
+          </div>
+        </section>
+      </section>
+      <div class="project-scroll-prompt" aria-hidden="true" hidden>
+        <img src="../../assets/Mouse%20Scroll.svg" alt="" draggable="false" />
+        <span>Scroll to View</span>
+      </div>
+    </main>
+
+    <footer>
+      <img
+        class="site-footer-svg"
+        src="../../assets/Testing%20Footer.svg"
+        alt=""
+      />
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.10/dist/browser/pixi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pixi-filters@5.3.0/dist/browser/pixi-filters.js"></script>
+    <script src="../main.js"></script>
+    <script src="motion.js"></script>
+  </body>
+</html>
