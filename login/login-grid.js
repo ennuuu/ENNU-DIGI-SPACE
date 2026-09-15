@@ -4,9 +4,9 @@ const gridOverlay = document.getElementById("gridOverlay");
 if (screen && gridOverlay) {
   const cellSize = 170;
   const gap = 0;
-  const radius = 1.2;
+  const radius = 0.55;
   const trail = [];
-  const trailLifetime = 600;
+  const trailLifetime = 900;
 
   function buildGrid() {
     const screenWidth = screen.clientWidth;
@@ -51,8 +51,23 @@ if (screen && gridOverlay) {
     }
 
     const fadeProgress = (distance - inner) / (outer - inner);
-    const softFalloff = Math.pow(fadeProgress, 2.8);
-    return 0.5 * softFalloff;
+    const eased = 1 - Math.pow(1 - fadeProgress, 5);
+    const softFalloff = Math.pow(eased, 1.6);
+    return 0.1 * softFalloff;
+  }
+
+  function resetGrid() {
+    trail.length = 0;
+    [...gridOverlay.children].forEach((cell) => {
+      cell.style.opacity = "1";
+      cell.style.transition = "none";
+    });
+
+    requestAnimationFrame(() => {
+      [...gridOverlay.children].forEach((cell) => {
+        cell.style.transition = "opacity 500ms ease-in-out";
+      });
+    });
   }
 
   function updateGridFromPointer(clientX, clientY) {
@@ -61,8 +76,8 @@ if (screen && gridOverlay) {
     const x = clientX - rect.left;
     const y = clientY - rect.top;
     const columns = Math.ceil(screen.clientWidth / (cellSize + gap));
-    const innerRadius = cellSize * 0.7;
-    const outerRadius = cellSize * (radius + 0.9);
+    const innerRadius = cellSize * 1.2;
+    const outerRadius = cellSize * (radius + 1.5);
 
     cells.forEach((cell, index) => {
       const col = index % columns;
@@ -76,11 +91,13 @@ if (screen && gridOverlay) {
         const dy = cellY - point.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
         const ageFactor = 1 - (performance.now() - point.time) / trailLifetime;
+        const trailRadius = outerRadius * 1.35;
 
-        if (distance < outerRadius) {
+        if (distance < trailRadius) {
           const trailOpacity =
-            getRevealOpacity(distance, innerRadius, outerRadius) *
-            Math.max(ageFactor, 0);
+            getRevealOpacity(distance, innerRadius * 1.05, trailRadius) *
+            Math.max(ageFactor, 0) *
+            1.7;
           opacity = Math.min(opacity, trailOpacity);
         }
       });
@@ -97,6 +114,7 @@ if (screen && gridOverlay) {
       }
 
       cell.style.opacity = opacity.toFixed(3);
+      cell.style.transition = "opacity 500ms ease-in-out";
     });
   }
 
@@ -107,19 +125,16 @@ if (screen && gridOverlay) {
     const localX = event.clientX - rect.left;
     const localY = event.clientY - rect.top;
     trail.push({ x: localX, y: localY, time: performance.now() });
-    if (trail.length > 12) {
+    if (trail.length > 7) {
       trail.shift();
     }
     updateTrail();
     updateGridFromPointer(event.clientX, event.clientY);
   });
 
-  window.addEventListener("pointerleave", () => {
-    trail.length = 0;
-    [...gridOverlay.children].forEach((cell) => {
-      cell.style.opacity = "1";
-    });
-  });
+  screen.addEventListener("pointerleave", resetGrid);
+  window.addEventListener("pointerleave", resetGrid);
+  document.addEventListener("mouseleave", resetGrid);
 
   window.addEventListener("resize", buildGrid);
 }

@@ -15,8 +15,6 @@
 }
 
 :root {
-  --screen-width: 800px;
-  --screen-height: 600px;
   --blue-deep: #0a2a8f;
   --blue-mid: #1c46b8;
   --blue-light: #6fa3e8;
@@ -43,6 +41,9 @@ body {
   background: #000000;
   color: var(--white);
   font-family: "Frutiger", Arial, sans-serif;
+  cursor:
+    url("../assets/Mouse.png") 0 0,
+    auto;
 }
 
 .screen {
@@ -77,14 +78,30 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   grid-auto-rows: 170px;
   pointer-events: none;
-  background: rgba(10, 18, 42, 0.2);
+  background: rgba(10, 18, 30, 0.14);
 }
 
 .grid-cell {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(10, 18, 42);
+  border: 1px solid rgba(173, 210, 255, 0.15);
+  background: linear-gradient(
+    135deg,
+    rgba(150, 190, 255, 0.12),
+    rgba(111, 155, 255, 0.06) 28%,
+    rgba(255, 255, 255, 0.04) 50%,
+    rgba(70, 102, 208, 0.08) 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    inset 0 -12px 22px rgba(89, 124, 255, 0.08),
+    inset 0 0 18px rgba(175, 214, 255, 0.12),
+    0 10px 24px rgba(9, 18, 38, 0.18);
+  backdrop-filter: blur(8px) saturate(1.5) brightness(1.05);
+  -webkit-backdrop-filter: blur(8px) saturate(1.5) brightness(1.05);
   opacity: 1;
-  transition: opacity 180ms ease-out;
+  transition:
+    opacity 180ms ease-out,
+    box-shadow 180ms ease-out,
+    background 180ms ease-out;
 }
 
 @media (min-width: 821px) {
@@ -171,18 +188,98 @@ body {
   gap: 14px;
 }
 
+.avatar,
+.username {
+  pointer-events: auto;
+}
+
 .avatar {
+  display: block;
   width: 110px;
   height: 110px;
-  border: 2px solid rgba(255, 255, 255, 0.85);
+  border: 2px solid rgba(255, 255, 255, 0.32);
   border-radius: 6px;
-  background: #d8d0c0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.16),
+    rgba(155, 203, 255, 0.12) 32%,
+    rgba(70, 110, 220, 0.08) 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -16px 24px rgba(89, 124, 255, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 10px 22px rgba(7, 15, 30, 0.18);
+  backdrop-filter: blur(12px) saturate(1.6) brightness(1.08);
+  -webkit-backdrop-filter: blur(12px) saturate(1.6) brightness(1.08);
+  overflow: hidden;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    filter 180ms ease;
+}
+
+.user-row:hover .avatar,
+.user-row:focus-within .avatar {
+  transform: translateY(-2px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -16px 24px rgba(89, 124, 255, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 14px 28px rgba(7, 15, 30, 0.22);
+  filter: brightness(1.06);
+}
+
+.avatar:active {
+  transform: translateY(0) scale(0.985);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -12px 20px rgba(89, 124, 255, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 6px 14px rgba(7, 15, 30, 0.15);
+}
+
+.avatar-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(1.2) contrast(1.08) brightness(1.04);
+  transition:
+    transform 180ms ease,
+    filter 180ms ease;
+}
+
+.user-row:hover .avatar-image,
+.user-row:focus-within .avatar-image {
+  transform: scale(1.03);
+  filter: saturate(1.3) contrast(1.1) brightness(1.08);
 }
 
 .username {
+  display: inline-block;
   color: var(--white);
   font-size: 17px;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    text-shadow 180ms ease,
+    opacity 180ms ease,
+    color 180ms ease;
+}
+
+.user-row:hover .username,
+.user-row:focus-within .username {
+  transform: translateX(2px);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.28);
+  color: #edf6ff;
+}
+
+.username:active {
+  transform: translateX(0) scale(0.985);
 }
 
 @media (max-width: 620px) {
@@ -205,10 +302,6 @@ body {
 
   .right-panel {
     padding-left: 3%;
-  }
-
-  .wintext {
-    font-size: clamp(20px, 6vw, 30px);
   }
 
   .tagline,
