@@ -6,22 +6,28 @@
     <link rel="stylesheet" href="login.css" />
   </head>
   <body>
-    <div class="screen">
-      <div class="glow"></div>
-      <div class="topbar"></div>
+    <div class="screen" id="loginScreen">
+      <video
+        class="login-video"
+        src="../assets/Backgrounds/Bliss.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        aria-hidden="true"
+      ></video>
+      <div class="grid-overlay" id="gridOverlay" aria-hidden="true"></div>
 
       <div class="main">
         <div class="divider"></div>
 
         <div class="left-panel">
           <div class="logo">
-            <span class="ms">Microsoft</span>
-            <div class="wintitle">
-              <div class="flag">
-                <span></span><span></span><span></span><span></span>
-              </div>
-              <span class="wintext">Windows<sup>XP</sup></span>
-            </div>
+            <img
+              class="logo-image"
+              src="../assets/Logo/LOGOTYPE.svg"
+              alt="ENNU"
+            />
           </div>
           <div class="tagline">Choose your user name</div>
         </div>
@@ -37,17 +43,7 @@
           </div>
         </div>
       </div>
-
-      <div class="bottombar">
-        <div class="shutdown">
-          <div class="icon"></div>
-          <span>Turn off computer</span>
-        </div>
-        <div class="hint">
-          After you log on, you can add or change accounts.<br />
-          Just go to Control Panel and click User Accounts.
-        </div>
-      </div>
     </div>
+    <script src="login-grid.js"></script>
   </body>
 </html>
