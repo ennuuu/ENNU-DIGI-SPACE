@@ -3,6 +3,48 @@ const assetRoot = canvas?.dataset.assetRoot || "../assets";
 const clickSoundUrl = `${assetRoot}/SFX/${encodeURIComponent("click-決定ボタンを押す31.mp3")}`;
 const selectSoundUrl = `${assetRoot}/SFX/${encodeURIComponent("select-決定ボタンを押す3.mp3")}`;
 
+function updateResponsiveHeaderAssets() {
+  const isMobile = window.matchMedia("(max-width: 820px)").matches;
+  const headerSvg = document.querySelector(".site-header-svg");
+  const mobileAssetRoot = `${assetRoot}/Mobile Layout`;
+  const desktopHeaderRoot = `${assetRoot}/Header`;
+
+  const buttonAssetMap = {
+    white: {
+      mobile: "Profile Button-Mobile.svg",
+      desktop: "Profile Button.svg",
+    },
+    blue: { mobile: "Work Button-Mobile.svg", desktop: "Work Button.svg" },
+    cyan: { mobile: "Fillms Button-Mobile.svg", desktop: "Films Button.svg" },
+    black: {
+      mobile: "Experiments Button-Mobile.svg",
+      desktop: "Experiments Button.svg",
+    },
+  };
+
+  if (headerSvg) {
+    const headerPath = isMobile
+      ? `${mobileAssetRoot}/Header-Mobile.svg`
+      : `${desktopHeaderRoot}/Header.svg`;
+    headerSvg.src = encodeURI(headerPath);
+  }
+
+  Object.entries(buttonAssetMap).forEach(([variant, files]) => {
+    const buttonImage = document.querySelector(`.header-button-${variant} img`);
+    if (!buttonImage) {
+      return;
+    }
+
+    const source = isMobile
+      ? `${mobileAssetRoot}/${files.mobile}`
+      : `${desktopHeaderRoot}/${files.desktop}`;
+    buttonImage.src = encodeURI(source);
+  });
+}
+
+window.addEventListener("resize", updateResponsiveHeaderAssets);
+updateResponsiveHeaderAssets();
+
 document.addEventListener("click", (event) => {
   const navigation = event.target.closest("a");
   const clickSound = new Audio(clickSoundUrl);
@@ -146,13 +188,20 @@ if (canvas && window.PIXI) {
     }
 
     function resizeImage() {
-      const scale = window.innerWidth / image.texture.width;
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+      const imageWidth = image.texture.width || image.width || 1;
+      const imageHeight = image.texture.height || image.height || 1;
+      const scale = Math.max(
+        viewportWidth / imageWidth,
+        viewportHeight / imageHeight,
+      );
 
       image.scale.set(scale);
-      image.x = 0;
-      image.y = 0;
-      displacementSprite.width = window.innerWidth;
-      displacementSprite.height = window.innerHeight;
+      image.x = (viewportWidth - imageWidth * scale) / 2;
+      image.y = (viewportHeight - imageHeight * scale) / 2;
+      displacementSprite.width = viewportWidth;
+      displacementSprite.height = viewportHeight;
     }
 
     window.addEventListener("pointermove", (event) => {
