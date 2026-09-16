@@ -40,7 +40,17 @@ footer {
   position: fixed;
   inset: 0;
   z-index: 2;
-  pointer-events: none;
+  pointer-events: auto;
+}
+
+.motion-gallery,
+.motion-gallery-stage,
+.motion-project-view,
+.project-carousel,
+.project-track,
+.project-tab,
+.project-tab * {
+  pointer-events: auto;
 }
 
 .motion-gallery {
@@ -240,6 +250,13 @@ footer {
   border-radius: 7px;
   background: #000000;
   object-fit: contain;
+  pointer-events: auto;
+}
+
+.project-video,
+.project-video-embed,
+.motion-preview-video {
+  pointer-events: auto;
 }
 
 .project-detail {

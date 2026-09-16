@@ -544,7 +544,7 @@ footer {
   .page-view {
     width: min(100%, 560px);
     min-height: 220px;
-    margin: 15rem auto 15rem;
+    margin: 11rem auto 15rem;
     padding: 3rem 2rem;
   }
 
