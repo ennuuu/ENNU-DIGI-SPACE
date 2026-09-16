@@ -47,11 +47,23 @@ updateResponsiveHeaderAssets();
 
 document.addEventListener("click", (event) => {
   const navigation = event.target.closest("a");
+  if (!navigation) {
+    return;
+  }
+
+  const hasExternalTarget = navigation.target === "_blank";
+  const href = navigation.getAttribute("href");
+  const isExternalLink = Boolean(
+    href &&
+    /^(https?:)?\/\//i.test(href) &&
+    new URL(href, window.location.href).origin !== window.location.origin,
+  );
+
   const clickSound = new Audio(clickSoundUrl);
   clickSound.volume = 0.35;
   clickSound.play().catch(() => {});
 
-  if (navigation) {
+  if (!hasExternalTarget && !isExternalLink) {
     event.preventDefault();
     const selectSound = new Audio(selectSoundUrl);
     selectSound.volume = 0.35;
